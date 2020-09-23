@@ -10,10 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import com.citi.bean.Employee;
 
-/**
- * @author Rucha
- *
- */
+
 public class EmployeeMapper implements RowMapper<Employee>{
 
 	@Override

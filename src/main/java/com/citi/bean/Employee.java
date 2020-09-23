@@ -3,10 +3,7 @@
  */
 package com.citi.bean;
 
-/**
- * @author Rucha
- *
- */
+
 public class Employee {
 	
 		private Integer age;

@@ -12,10 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.citi.bean.Employee;
 
-/**
- * @author Rucha
- *
- */
+
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO{
 	

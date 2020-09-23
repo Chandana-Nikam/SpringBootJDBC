@@ -7,10 +7,7 @@ import java.util.List;
 
 import com.citi.bean.Employee;
 
-/**
- * @author Rucha
- *
- */
+
 public interface EmployeeDAO {
 	/** 
 	    * This is the method to be used to initialize
