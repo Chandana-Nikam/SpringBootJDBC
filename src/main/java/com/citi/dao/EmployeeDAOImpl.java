@@ -5,6 +5,8 @@ package com.citi.dao;
 
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -16,12 +18,20 @@ import com.citi.bean.Employee;
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO{
 	
-	@Autowired(required=true)
+	
 	private JdbcTemplate jdbcTemplateObject;
 	
+	@Autowired
+
+	 public void setDataSource(DataSource dataSource) {
+	        this.jdbcTemplateObject = new JdbcTemplate(dataSource);
+	    }
+
+	
 	public void setupDB() {
-		
-		jdbcTemplateObject.execute("DROP TABLE employee IF EXISTS");
+		System.out.println("hlo");
+		jdbcTemplateObject.execute("DROP TABLE IF EXISTS employee");
+		System.out.println("hello");
 		
 		jdbcTemplateObject.
 		execute("CREATE TABLE employee"

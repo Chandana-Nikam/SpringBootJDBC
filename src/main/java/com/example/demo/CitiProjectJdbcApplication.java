@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.citi.bean.Employee;
 import com.citi.configuration.EmployeeConfig;
+import com.citi.dao.EmployeeDAO;
 import com.citi.dao.EmployeeDAOImpl;
 
 @SpringBootApplication
@@ -24,7 +25,7 @@ public class CitiProjectJdbcApplication {
 				
 			EmployeeDAOImpl employeeJDBCTemplate = 
 					context.getBean(EmployeeDAOImpl.class);
-						
+			//EmployeeDAO employeeJDBCTemplate = context.getBean(EmployeeDAO.class);			
 			// method call here 
 			runEmployeeCRUD(employeeJDBCTemplate);
 			

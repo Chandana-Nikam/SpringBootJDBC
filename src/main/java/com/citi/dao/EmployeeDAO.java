@@ -23,4 +23,6 @@ public interface EmployeeDAO {
 	   public void delete(Integer id);
 	  
 	   public void update(Integer id, Integer age);
+	   
+	   public void setupDB();
 }
